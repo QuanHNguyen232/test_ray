@@ -15,13 +15,7 @@ try:
     print("torch cuda is available:", torch.cuda.is_available())
 except Exception as e:
     print("Error importing torch:", e)
-    
-try:
-    import emoji
-    print(emoji.emojize("This is a test :thumbs_up:"))
-except ImportError:
-    print("Emoji library not found. Please install it to see emojis.")
-    
+        
 @ray.remote
 def add_one(a):
     return a + 1
